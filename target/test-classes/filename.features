@@ -1,0 +1,33 @@
+Feature: Booking hotel room for seven times
+
+Scenario Outline:Booking hotels for seven times
+Given user adactin website on chrome browser
+When user enters "<username>" and "<password>" and login
+And user click login button
+Then user select location of stay "<location>"
+Then user select hotel to stay "<Hotels>"
+And select room type and no of rooms  "<Room Type>""<Number of Room>"
+Then Select checkin date and checkout date "<Check In Date>" and "<Check Out Date>"
+Then select no of adult and children" <Adult Per Room>" and "<Children Per Room>"
+Then click search button 
+When select hotel
+Then click continue
+Then enter user firstname and lastname
+Then enter user address
+Then enter user credit card number 
+Then eneter user name credit card type "<Credit Card Type>"
+When select expiry date 
+And enter cvv number 
+And click book now
+Then copy booking number and paste on console
+
+
+
+
+
+Examples:
+|username |password |location|Hotels     | Room Type|Number of Room|Check In Date|Check Out Date|Adults Per Room |Childrens Per Room | Credit Card Type|
+|somasoma |OR826Z   | London |Hotel Creek|  Standard|2-Two         |13/06/2022   |15/06/2022    |2-Two           |1-One              |Visa             |      |
+
+
+
